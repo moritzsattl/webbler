@@ -1,0 +1,54 @@
+<style>
+
+     *{
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2;}
+    tr:hover{
+        background-color: aquamarine;
+    }
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+    }
+
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    }
+</style>
+<table>
+    <tr>
+        <th>Participants</th>
+        <th>distance</th>
+        <th>date</th>
+        <th>time</th>
+        <th>model</th>
+    </tr>
+    <tr>
+        <td>{{ results.names[0] }}</td>
+        <td>{{ results.distance[0] }}</td>
+        <td>{{ results.date[0] }}</td>
+        <td>{{ results.time[0] }}</td>
+        <td>{{ results.modell[0] }}</td>
+    </tr>
+    <tr>
+        <td>{{ results.names[1] }}</td>
+        <td>{{ results.distance[1] }}</td>
+        <td>{{ results.date[1] }}</td>
+        <td>{{ results.time[1] }}</td>
+        <td>{{ results.modell[1] }}</td>
+    </tr>
+</table>
