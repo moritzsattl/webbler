@@ -1,29 +1,19 @@
 <link href="{{ asset('styles/main.css') }}" type="text/css" rel="stylesheet" />
-<style>
-    .table{
-        width: 100%;
-    }
-    .table_row{
-         text-align: left;
-     }
-    .table__header{
-        text-align: left;
-    }
-</style>
+<link href="{{ asset('styles/results.css') }}" type="text/css" rel="stylesheet" />
 <div class="container">
     <table class="table">
         <tr class="table__header">
             <th>Participants</th>
-            <th>distance</th>
-            <th>time</th>
-            <th>date</th>
-            <th>model</th>
+            <th>Travel distance (m)</th>
+            <th>Flight Duration (s)</th>
+            <th>Date</th>
+            <th>Model</th>
 
 
         </tr>
         {% for user in results %}
 
-                <tr class="table_row" onclick="location.href='{{ path('show_tournamentEntry_json',{'id' : user.id })}}'">
+                <tr class="table__row" onclick="location.href='{{ path('show_tournamentEntry_json',{'id' : user.id })}}'">
                     <td>{{ user.name }}</td>
                     <td>{{ user.travel_distance }}</td>
                     <td>{{ user.flight_duration }}</td>
@@ -33,6 +23,6 @@
         {% endfor %}
     </table>
     <a href="{{ path('form_tournamentEntry') }}">
-        <button class="__button __button--green">ADD</button>
+        <button class="__button">ADD</button>
     </a>
 </div>

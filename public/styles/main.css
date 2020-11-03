@@ -1,25 +1,26 @@
-.__button{
-     width: 100px;
-     padding: 0.5em;
-     border-radius: 25px;
-     border: none;
-     color: white;
-     background: linear-gradient(to right, darkgrey,green);
-     background-size: 600%;
-     transition: 0.5s all;
-
- }
+*{
+    font-family: Roboto, serif;
+}
+.__button {
+    width: 100px;
+    padding: 0.5em;
+    transition: background-position ease-in-out .4s, color ease-in-out .4s, font-weight ease-in-out .4s;
+    font-size: 1em;
+    color: black;
+    background: linear-gradient(0, black 50%, white 50%);
+    background-size: 100px 200px;
+    border: black 2px solid;
+    margin: 0.5em;
+}
 
 .__button:hover {
-     background-position-x: 100%;
- }
-.__button--green{
-    background: linear-gradient(to right, darkgrey,green);
+    background-position-y: bottom;
+    color: white;
+    font-weight: bold;
 }
-.__button--yellow{
-    background: linear-gradient(to right, darkgrey,yellow);
-}
-.container{
+
+
+.container {
     margin: 0 auto;
     max-width: 750px;
 }

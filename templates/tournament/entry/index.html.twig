@@ -1,12 +1,14 @@
-<style>
-
-</style>
-<div>
-    <div>{{ entry.name }}</div>
-    <div>{{ entry.travelDistance }}</div>
-    <div>{{ entry.flightDuration }}</div>
-    <div>{{ entry.model }}</div>
+<link href="{{ asset('styles/main.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{ asset('styles/show_entry.css') }}" type="text/css" rel="stylesheet"/>
+<div class="container">
+    <div class="container__entry">
+        <div><span class="__span--bold">Participant: </span>{{ entry.name }}</div>
+        <div><span class="__span--bold">Travel Distance (s): </span>{{ entry.travelDistance }}</div>
+        <div><span class="__span--bold">Flight Duration (m): </span>{{ entry.flightDuration }}</div>
+        <div><span class="__span--bold">Date: </span>{{ date }}</div>
+        <div><span class="__span--bold">Model: </span>{{ entry.model }}</div>
+    </div>
     <a href="{{ path('results') }}">
-        <button><--</button>
+        <button class="__button">RESULTS</button>
     </a>
 </div>

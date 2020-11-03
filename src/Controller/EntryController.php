@@ -84,9 +84,9 @@ class EntryController extends AbstractController
             return new Response($xmlContent);
         }
 
-
         return $this->render('tournament/entry/index.html.twig', [
             'entry' => $tournamentEntry,
+            'date' => $tournamentEntry->getDate()->format("d-m-Y")
         ]);
 
     }

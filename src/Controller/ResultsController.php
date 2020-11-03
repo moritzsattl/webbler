@@ -13,7 +13,7 @@ class ResultsController extends AbstractController
 
 
     /**
-     * @Route("/results/1",name="results")
+     * @Route("/tournament/results/1",name="results")
      */
     public function results()
     {

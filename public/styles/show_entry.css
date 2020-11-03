@@ -1,0 +1,10 @@
+.container__entry{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 0 .5em 0;
+}
+.__span--bold{
+    font-weight: bold;
+}
