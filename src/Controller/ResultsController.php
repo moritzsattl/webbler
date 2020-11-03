@@ -7,30 +7,25 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+
 class ResultsController extends AbstractController
 {
+
+
     /**
-     * @Route("/results/1")
+     * @Route("/results/1",name="results")
      */
     public function results()
     {
-        $results = array(
-            'names' => array(
-                'mark','peter'
-            ),
-            'distance' => array(
-                '10m','12m'
-            ),
-            'date' => array(
-                '02.08','11.08'
-            ),
-            'time' => array(
-                '10s','2s'
-                ),
-            'modell' => array(
-                'A700','A800'
-            )
-        );
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $conn = $entityManager->getConnection();
+
+        $sql = 'SELECT * FROM tournament_entry ORDER BY travel_distance desc';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        // returns an array of Product objects
+        $results = $stmt->fetchAll();
 
         return $this->render('results/1.html.twig', [
             'results' => $results,

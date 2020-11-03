@@ -1,0 +1,25 @@
+.__button{
+     width: 100px;
+     padding: 0.5em;
+     border-radius: 25px;
+     border: none;
+     color: white;
+     background: linear-gradient(to right, darkgrey,green);
+     background-size: 600%;
+     transition: 0.5s all;
+
+ }
+
+.__button:hover {
+     background-position-x: 100%;
+ }
+.__button--green{
+    background: linear-gradient(to right, darkgrey,green);
+}
+.__button--yellow{
+    background: linear-gradient(to right, darkgrey,yellow);
+}
+.container{
+    margin: 0 auto;
+    max-width: 750px;
+}
