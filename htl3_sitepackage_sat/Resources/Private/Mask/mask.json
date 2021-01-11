@@ -1,0 +1,89 @@
+{
+    "tt_content": {
+        "elements": {
+            "photostory": {
+                "color": "#ff0000",
+                "columns": [
+                    "image",
+                    "header"
+                ],
+                "description": "Photo Story",
+                "icon": "fa-image",
+                "key": "photostory",
+                "label": "Photostory",
+                "labels": [
+                    "Photostory Image",
+                    "Photostory Title"
+                ],
+                "shortLabel": "psstory"
+            },
+            "photostory_panel": {
+                "color": "#ff0000",
+                "columns": [
+                    "header",
+                    "tx_mask_photo_panels"
+                ],
+                "description": "Photo Story Panel",
+                "icon": "fa-dropbox",
+                "key": "photostory_panel",
+                "label": "Photostory Panel",
+                "labels": [
+                    "Photostory Panel Title",
+                    "Photo Stories"
+                ],
+                "shortLabel": "pspanel"
+            }
+        },
+        "sql": {
+            "tx_mask_photo_panels": {
+                "tt_content": {
+                    "tx_mask_photo_panels": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_photo_panels": {
+                "cTypes": [
+                    "mask_photostory"
+                ],
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "expandSingle": "0",
+                        "levelLinksPosition": "top",
+                        "newRecordLinkTitle": "",
+                        "showAllLocalizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showRemovedLocalizationRecords": "1",
+                        "showSynchronizationLink": "0",
+                        "useSortable": "1"
+                    },
+                    "behaviour": {
+                        "allowLanguageSynchronization": "0"
+                    },
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "tt_content",
+                    "maxitems": "",
+                    "minitems": "",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": "999"
+                                }
+                            }
+                        }
+                    },
+                    "type": "inline"
+                },
+                "description": "",
+                "exclude": "1",
+                "key": "photo_panels",
+                "l10n_mode": ""
+            }
+        }
+    }
+}

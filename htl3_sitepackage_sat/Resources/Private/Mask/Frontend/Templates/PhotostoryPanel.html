@@ -1,0 +1,14 @@
+<div class="panel-container">
+<f:if condition="{data.header}">
+    <div class="panel-title">{data.header}</div>
+</f:if>
+<div class="row">
+<f:if condition="{data.tx_mask_photo_panels}">
+    <f:for each="{data.tx_mask_photo_panels}" as="data_item">
+        <div class="col-sm">
+            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
+        </div>
+    </f:for>
+</f:if>
+</div>
+</div>

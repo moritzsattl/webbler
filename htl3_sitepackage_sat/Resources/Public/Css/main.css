@@ -1,0 +1,14 @@
+.container{
+    margin-top: 1rem;
+}
+
+.panel-title{
+    font-size: 2rem;
+}
+.photostory{
+    margin: 1rem 0;
+    width: 18rem; 
+}
+.photostory-image{
+    height: 200px;
+}

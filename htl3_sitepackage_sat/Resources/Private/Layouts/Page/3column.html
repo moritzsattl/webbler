@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <f:for each="{mainnavigation}" as="mainnavigationItem">
+            <f:if condition="{mainnavigationItem.children}">
+                <f:then>
+                    <li class="nav-item dropdown {f:if(condition: child.active, then:'active')}">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          {mainnavigationItem.title}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <f:for each="{mainnavigationItem.children}" as="child">
+                                <a class="dropdown-item" href="{child.link}">{child.title}</a>
+                            </f:for>
+                        </div>
+                      </li>
+                </f:then>
+                <f:else>
+                    <li class="nav-item {f:if(condition: child.active, then:'active')}">
+                        <a class="nav-link" href="{mainnavigationItem.link}">{mainnavigationItem.title} <span class="sr-only">(current)</span></a>
+                    </li>
+                </f:else>
+            </f:if>
+        </f:for>
+    </div>
+  </nav>
+<f:debug>{_all}</f:debug>
+<f:render section="Main" />
+

@@ -1,0 +1,19 @@
+
+
+
+
+<div class="card photostory">
+    <f:if condition="{data.image}">
+        <f:for each="{data.image}" as="file">
+            <f:image class="card-img-top photostory-image" image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+            {file.description}
+        </f:for>
+    </f:if>
+    <div class="card-body">
+        <p class="card-text">
+            <f:if condition="{data.header}">
+                {data.header}
+            </f:if>
+        </p>
+    </div>
+  </div>
